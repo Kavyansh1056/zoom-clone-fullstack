@@ -1,0 +1,23 @@
+{
+  "name": "zoom-clone-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-ready Zoom Clone Video Conferencing Platform with Next.js, FastAPI, SQLAlchemy, SQLite, and WebRTC",
+  "scripts": {
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "start:frontend": "npm run start --prefix frontend",
+    "lint:frontend": "npm run lint --prefix frontend",
+    "typecheck:frontend": "npm run typecheck --prefix frontend",
+    "dev:backend": "python -m uvicorn main:app --app-dir backend --reload --port 8000",
+    "seed:backend": "python backend/seed.py",
+    "test:signaling": "python -u backend/test_signaling.py",
+    "test:api": "python backend/test_api_audit.py",
+    "test:mesh": "python backend/test_three_participant_mesh.py",
+    "test:regression": "python backend/test_final_regression.py",
+    "test:all": "python backend/test_final_regression.py"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
